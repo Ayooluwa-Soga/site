@@ -1,0 +1,12 @@
+<script>
+    console.log(location.href)
+
+    var we_need = location.href.split('/')
+    we_need = we_need[we_need.length - 1]
+    if (we_need != 'find_file') {
+        localStorage.setItem('resource_centre_current_file', we_need)
+        location.assign('../file')
+    } else {
+        location.assign('./')
+    }
+</script>

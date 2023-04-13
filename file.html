@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> Learner's Crib Resource Centre </title>
+
+    <meta name="viewport" content="width=device-width,inital-scale=1,user-scalable=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/all.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/all.min.js"></script>
+    <script type="text/javascript" src="./js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="right">
+            <button onclick="location.assign('./login')" id="account_management"> Sign In or Sign Up </button>
+        </div>
+
+        <div class="left">
+            Learner's Crib Resource
+        </div>
+
+        <div class="clear"></div>
+
+    </header>
+
+    <div class="header">
+        <div class="right">
+            <button onclick="location.assign('./upload')" id="submit_class_material"> Submit A Class Material
+            </button>
+        </div>
+
+        <div class="left">
+            <a href="#"> About Us </a>
+            <a href="./"> Resources </a>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <main id="split_screen">
+
+        <div class="main_left">
+
+            <div class="main_search">
+
+                <form role="form" id="Search_Form">
+                    <input type="search" id="search_item"
+                        placeholder="Search With File Name, Course Code or Course Title">
+                    <button> <i class="fa fa-search"></i> <span>Search</span> </button>
+                </form>
+
+            </div>
+
+            <div class="main_list">
+
+                <div class="main_list_files">
+
+                    <div class="main_list_file_container" id="main_list_file_container">
+
+                        <div class="main_file_single">
+
+                            <input type="text" value="https://learnerscrib.platiniumxpwallet.com/find_file/1"
+                                class="single_file_link_share" id="single_file_link_share" readonly>
+                            <label> Click To Copy Link <i class="fa fa-chevron-up"></i> </label>
+
+                            <div class="main_file_main_top_info">
+
+                                <div class="main_file_main_top_info_left">
+
+                                    <img src="./img_placeholder/pdf.png" id="material_image">
+                                    <label id="material_type"> PDF File </label>
+
+                                </div>
+
+                                <div class="main_file_main_top_info_right">
+
+                                    <h3 id="material_name"> </h3>
+                                    <h6 id="course_title"> </h6>
+                                    <h7 id="course_code"> </h7>
+
+                                    <p id="material_description"> </p>
+
+
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+
+                                    <div class="buttons">
+                                        <!-- <button> View File </button> -->
+                                        <button id="download_material"> Download File </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="main_right">
+
+            <div class="main_right_account">
+
+                <p>New Here?<a href="./register"> Join Free </a></p>
+                <label> or </label>
+                <p>Continue Your Journey!<a href="./login"> Sign In </a></p>
+
+            </div>
+
+            <div class="main_right_top_results">
+                <h2> Top Views </h2>
+                <div class="main_right_top_results_container" id="main_right_top_results_container_views"></div>
+            </div>
+
+            <div class="main_right_top_results">
+                <h2> Top Downloads </h2>
+                <div class="main_right_top_results_container" id="main_right_top_results_container_downloads"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

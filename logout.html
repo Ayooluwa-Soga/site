@@ -1,0 +1,25 @@
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+
+<script type="text/javascript">
+    var send_to = location.href.split('/')
+    send_to = send_to[send_to.length - 1]
+    if (send_to == 'logout') {
+        send_to = '';
+    }
+
+    $.ajax({
+        url: '../php/logout',
+        success: function (data) {
+            console.log(data)
+            localStorage.removeItem('resource_centre_user_logged_in')
+            localStorage.removeItem('resource_centre_user_name')
+            location.assign('../' + send_to)
+        },
+        error: function (data) {
+            console.log(data)
+        },
+        fail: function (data) {
+            console.log(data)
+        }
+    })
+</script>
